@@ -35,3 +35,14 @@ tasks.withType<KotlinCompile> {
 tasks.withType<Test> {
     useJUnitPlatform()
 }
+
+tasks.getByName<Jar>("jar") {
+    enabled = false
+}
+
+// tasks.withType(Jar::class) {
+//     manifest {
+//         attributes["Manifest-Version"] = "0.0.1"
+//         attributes["Main-Class"] = "com.elfz.partneraccountapi.PartnerAccountApiApplicationKt"
+//     }
+// }
